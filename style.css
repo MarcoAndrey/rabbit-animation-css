@@ -1,0 +1,351 @@
+body {
+    margin: 0;
+    height: 100vh;
+    width: 100vw;
+    display: grid;
+    place-items: center;
+}
+
+.phone {
+    position: relative;
+    border: 8px solid black;
+    border-radius: 40px;
+    height: 600px;
+    width: 300px;
+    box-shadow: 0 19px 38px rgb(0, 0, 0, 0.30), 0 15px 12px rgb(0, 0, 0, 0.22);
+    background-color: #CCEFFF;
+}
+
+.leyer-1 {
+    position: absolute;
+    z-index: 1;
+    height: 450px;
+    width: 80px;
+    background: red;
+    bottom: 0;
+    right: 60px;
+}
+
+.leyer-2 {
+    position: absolute;
+    z-index: 2;
+    height: 450px;
+    width: 80px;
+    background: red;
+    bottom: 0;
+    left: 60px;
+}
+
+.leyer-3 {
+    position: absolute;
+    z-index: 3;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: 0 auto;
+    width: 220px;
+    height: 400px;
+    background: burlywood;
+    border-radius: 30px;
+    box-shadow: 0 19px 38px rgb(0, 0, 0, 0.30), 0 15px 12px rgb(0, 0, 0, 0.22);
+}
+
+.leyer-4 {
+    position: absolute;
+    z-index: 4;
+    height: 350px;
+    width: 80px;
+    background: #008eff;
+    bottom: 0;
+    left: 30px;
+}
+
+.leyer-5 {
+    position: absolute;
+    z-index: 5;
+    left: 0;
+    bottom: 0;
+    margin: 0 auto;
+    width: 160px;
+    height: 300px;
+    background: burlywood;
+    border-radius: 30px;
+    box-shadow: 0 19px 38px rgb(0, 0, 0, 0.30), 0 15px 12px rgb(0, 0, 0, 0.22);
+}
+
+.leyer-6 {
+    position: absolute;
+    z-index: 6;
+    height: 300px;
+    width: 80px;
+    background: red;
+    bottom: 0;
+    right: 30px;
+}
+
+.leyer-7 {
+    position: absolute;
+    z-index: 7;
+    right: 0;
+    bottom: 0;
+    margin: 0 auto;
+    width: 180px;
+    height: 250px;
+    background: burlywood;
+    border-radius: 30px;
+    box-shadow: 0 19px 38px rgb(0, 0, 0, 0.30), 0 15px 12px rgb(0, 0, 0, 0.22);
+}
+
+.leyer-8 {
+    position: absolute;
+    z-index: 8;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: 0 auto;
+    width: 200px;
+    height: 50px;
+    /* background: #16f869; */
+}
+
+.leyer-9 {
+    position: absolute;
+    z-index: 9;
+    left: 0;
+    bottom: 0;
+    margin: 0 auto;
+    width: 110px;
+    height: 100px;
+    /* background: #ffffff; */
+    border-radius: 0 0 0 32px;
+}
+
+.leyer-10 {
+    position: absolute;
+    z-index: 10;
+    right: 0;
+    bottom: 0;
+    margin: 0 auto;
+    width: 110px;
+    height: 100px;
+    /* background: #b8ad98; */
+    border-radius: 0 0 32px 0;
+}
+
+
+/* Bunny 1 */
+
+
+/* oreja der */
+
+.left-ear--outer {
+    background: white;
+    border-radius: 90px;
+    width: 20px;
+    height: 50px;
+    position: absolute;
+    left: 10px;
+}
+
+.left-ear--inner {
+    background: pink;
+    border-radius: 100px;
+    width: 10px;
+    height: 50px;
+    position: absolute;
+    left: 15px;
+    top: 8px;
+}
+
+
+/* oreja izq */
+
+.right-ear--outer {
+    background: white;
+    border-radius: 90px;
+    width: 20px;
+    height: 50px;
+    position: absolute;
+    right: 10px;
+}
+
+.right-ear--inner {
+    background: pink;
+    border-radius: 100px;
+    width: 10px;
+    height: 50px;
+    position: absolute;
+    right: 15px;
+    top: 8px;
+}
+
+
+/* cabeza */
+
+.head {
+    background: white;
+    width: 100%;
+    height: 80px;
+    border-radius: 50%;
+    position: absolute;
+    right: 0;
+    left: 0;
+    top: 30px;
+    margin: 0 auto;
+}
+
+
+/* eyes */
+
+.head__eye {
+    border-radius: 50%;
+    background: #525251;
+    width: 4px;
+    height: 4px;
+    position: absolute;
+    top: 15px;
+    animation-name: blink;
+}
+
+@keyframes blink {
+    0% {}
+    5% {}
+    10% {}
+}
+
+.head__eye--left {
+    left: 30px;
+}
+
+.head__eye--right {
+    right: 30px;
+}
+
+
+/* Wall */
+
+.lawn--3 {
+    position: absolute;
+    width: 220px;
+    height: 50px;
+}
+
+.zigzag {
+    background: linear-gradient(135deg, #00cf00 25%, transparent 25%) -51px 0, linear-gradient(-135deg, #00cf00 25%, transparent 25%) -50px 0, linear-gradient(45deg, #00cf00 25%, transparent 25%), linear-gradient(-45deg, #00cf00 25%, transparent 25%);
+    background-size: 20px 100px;
+    border-radius: 30px 30px 0 0;
+}
+
+.shadow--3 {
+    position: absolute;
+    width: 220px;
+    height: 50px;
+    top: 10px;
+}
+
+.zigzag--shadow {
+    background: linear-gradient(135deg, rgb(164 143 118 / 80%) 25%, transparent 25%) -50px 0, linear-gradient(-135deg, rgb(128 70 0 / 50%) 25%, transparent 25%) -50px 0, linear-gradient(45deg, rgb(128 70 0 / 50%) 25%, transparent 25%), linear-gradient(-45deg, rgb(128 70 0 / 50%) 25%, transparent 25%);
+    background-size: 20px 100px;
+    border-radius: 20px 20px 0 0;
+}
+
+.lawn--5 {
+    position: absolute;
+    width: 160px;
+    height: 50px;
+}
+
+.shadow--5 {
+    position: absolute;
+    width: 160px;
+    height: 50px;
+    top: 10px;
+}
+
+.lawn--7 {
+    position: absolute;
+    width: 180px;
+    height: 50px;
+}
+
+.shadow--7 {
+    position: absolute;
+    width: 180px;
+    height: 50px;
+    top: 10px;
+}
+
+.lawn--1 {
+    position: absolute;
+    background: green;
+    width: 200px;
+    height: 50px;
+    border-radius: 80% 80% 0 0;
+}
+
+.lawn--center {
+    position: absolute;
+    background: green;
+    width: 90px;
+    height: 90px;
+    border-radius: 100%;
+    bottom: 40px;
+    left: 60px;
+}
+
+.lawn--left {
+    position: absolute;
+    background: green;
+    width: 100px;
+    height: 100px;
+    border-radius: 100%;
+    bottom: 10px;
+}
+
+.lawn--right {
+    position: absolute;
+    background: green;
+    width: 100px;
+    height: 100px;
+    border-radius: 100%;
+    right: 0;
+    bottom: 10px;
+}
+
+.nube-izq-down {
+    position: absolute;
+    background: white;
+    width: 120px;
+    height: 70px;
+    bottom: 0;
+    border-radius: 100% 100% 60px 60px;
+}
+
+.nube-izq-top {
+    position: absolute;
+    background: white;
+    width: 90px;
+    height: 90px;
+    border-radius: 100% 100% 100% 50%;
+    bottom: 24px;
+}
+
+.nube-der-down {
+    position: absolute;
+    background: white;
+    width: 120px;
+    height: 70px;
+    bottom: 0;
+    border-radius: 100px 40% 80% 60px;
+    right: 0;
+}
+
+.nube-der-top {
+    position: absolute;
+    background: white;
+    width: 90px;
+    height: 90px;
+    border-radius: 100% 100% 100% 50%;
+    bottom: 24px;
+    right: 0;
+}
