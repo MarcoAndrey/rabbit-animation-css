@@ -10,15 +10,10 @@
 
 <body>
     <!-- estructura -->
-
     <div class="phone">
-        <input type="checkbox">
-
-        <h1>Play rabbit</h1>
-        <h5 class="total-counter">Score: </h5>
         <!-- bunny -->
-        <div class="leyer-1">
-            <input type="checkbox">
+        <div class="layer-1">
+            <input type="checkbox" class="bunny">
             <div class="left-ear--outer"></div>
             <div class="left-ear--inner"></div>
             <div class="right-ear--outer"></div>
@@ -29,8 +24,8 @@
             </div>
         </div>
         <!-- bunny -->
-        <div class="leyer-2">
-            <input type="checkbox">
+        <div class="layer-2">
+            <input type="checkbox" class="bunny">
             <div class="left-ear--outer"></div>
             <div class="left-ear--inner"></div>
             <div class="right-ear--outer"></div>
@@ -41,12 +36,13 @@
             </div>
         </div>
         <!-- wall -->
-        <div class="leyer-3">
+        <div class="layer-3">
             <div class="shadow--3 zigzag--shadow"></div>
             <div class="lawn--3 zigzag"></div>
         </div>
         <!-- bunny -->
-        <div class="leyer-4">
+        <div class="layer-4">
+            <input type="checkbox" class="bunny">
             <div class="left-ear--outer"></div>
             <div class="left-ear--inner"></div>
             <div class="right-ear--outer"></div>
@@ -57,12 +53,13 @@
             </div>
         </div>
         <!-- wall -->
-        <div class="leyer-5">
+        <div class="layer-5">
             <div class="shadow--5 zigzag--shadow"></div>
             <div class="lawn--5 zigzag"></div>
         </div>
         <!-- bunny -->
-        <div class="leyer-6">
+        <div class="layer-6">
+            <input type="checkbox" class="bunny">
             <div class="left-ear--outer"></div>
             <div class="left-ear--inner"></div>
             <div class="right-ear--outer"></div>
@@ -73,28 +70,34 @@
             </div>
         </div>
         <!-- wall -->
-        <div class="leyer-7">
+        <div class="layer-7">
             <div class="shadow--7 zigzag--shadow"></div>
             <div class="lawn--7 zigzag"></div>
         </div>
         <!-- nube -->
-        <div class="leyer-8">
+        <div class="layer-8">
             <div class="lawn--1"></div>
             <div class="lawn--center"></div>
             <div class="lawn--left"></div>
             <div class="lawn--right"></div>
         </div>
         <!-- lawn -->
-        <div class="leyer-9">
+        <div class="layer-9">
             <div class="nube-izq-down"></div>
             <div class="nube-izq-top"></div>
         </div>
         <!-- lawn -->
-        <div class="leyer-10">
+        <div class="layer-10">
             <div class="nube-der-down"></div>
             <div class="nube-der-top"></div>
         </div>
+
+        <!-- score -->
+        <h1>Play rabbit</h1>
+        <h5 id="score">Score: 0</h5>
     </div>
+
+    <script src="score.js"></script>
 </body>
 
 </html>
