@@ -1,4 +1,4 @@
-// Aumenta el conteo al atrapar los bunnys 
+// Aumenta el conteo al atrapar los bunnys
 // let score = 0;
 // const scoreElement = document.getElementById("score");
 // const bunnies = document.querySelectorAll(".bunny");
@@ -10,16 +10,24 @@
 //   });
 // });
 
-
 let score = 0;
 const scoreElement = document.getElementById("score");
 const bunnies = document.querySelectorAll(".bunny");
-
 let difficulty = "easy"; // nivel inicial
+
+function mostrarModal(mensaje) {
+    document.getElementById("modal-text").textContent = mensaje;
+    document.getElementById("modal").classList.add("show");
+}
+
+function cerrarModal() {
+    document.getElementById("modal").classList.remove("show");
+}
 
 bunnies.forEach((bunny) => {
     bunny.addEventListener("click", () => {
-        if (!bunny.checked) { // evita contar varias veces el mismo bunny
+        if (!bunny.checked) {
+            // evita contar varias veces el mismo bunny
             score++;
             scoreElement.textContent = "Score: " + score;
 
@@ -27,17 +35,19 @@ bunnies.forEach((bunny) => {
             if (score % 6 === 0) {
                 if (score === 6) {
                     setTimeout(() => {
-                        alert("🎉 ¡Has atrapado 6 bunnys!");
+                        mostrarModal("🎉 ¡Has atrapado 6 bunnys!");
                         nextLevel();
                     }, 100);
                 } else if (score === 12) {
                     setTimeout(() => {
-                        alert("⚡ Muy bien, ahora nivel MEDIO!");
+                        mostrarModal("⚡ Muy bien, ahora nivel MEDIO!");
                         nextLevel();
                     }, 100);
                 } else if (score === 18) {
                     setTimeout(() => {
-                        alert("🏆 ¡Has completado todos los niveles, eres un maestro cazador de bunnys!");
+                        mostrarModal(
+                            "🏆 ¡Has completado todos los niveles, eres un maestro cazador de bunnys!"
+                        );
                     }, 100);
                 }
             }
@@ -59,11 +69,9 @@ function nextLevel() {
 function changeSpeed(multiplier) {
     bunnies.forEach((bunny) => {
         let parent = bunny.parentElement;
-        // velocidad del conejo
         bunny.style.animationDuration =
-            (parseFloat(getComputedStyle(bunny).animationDuration) * multiplier) + "s";
-        // velocidad de la capa
+            parseFloat(getComputedStyle(bunny).animationDuration) * multiplier + "s";
         parent.style.animationDuration =
-            (parseFloat(getComputedStyle(parent).animationDuration) * multiplier) + "s";
+            parseFloat(getComputedStyle(parent).animationDuration) * multiplier + "s";
     });
 }

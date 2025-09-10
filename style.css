@@ -1,489 +1,537 @@
 body {
-  margin: 0;
-  height: 100vh;
-  width: 100vw;
-  display: grid;
-  place-items: center;
-  counter-reset: score;
+    margin: 0;
+    height: 100vh;
+    width: 100vw;
+    display: grid;
+    place-items: center;
+    counter-reset: score;
 }
 
 .phone {
-  position: relative;
-  border: 8px solid black;
-  border-radius: 40px;
-  height: 600px;
-  width: 300px;
-  box-shadow: 0 19px 38px rgb(0, 0, 0, 0.3), 0 15px 12px rgb(0, 0, 0, 0.22);
-  background: #ccefff;
-  overflow: hidden;
+    position: relative;
+    border: 8px solid black;
+    border-radius: 40px;
+    height: 600px;
+    width: 300px;
+    box-shadow: 0 19px 38px rgb(0, 0, 0, 0.3), 0 15px 12px rgb(0, 0, 0, 0.22);
+    background: #ccefff;
+    overflow: hidden;
 }
 
 input[type="checkbox"] {
-  appearance: none;
-  cursor: pointer;
-  height: 50px;
-  margin: 0;
-  position: relative;
-  top: 0;
-  width: 80px;
-  z-index: 2;
+    appearance: none;
+    cursor: pointer;
+    height: 50px;
+    margin: 0;
+    position: relative;
+    top: 0;
+    width: 80px;
+    z-index: 2;
 }
 
 input[type="checkbox"]:focus {
-  appearance: none;
-  outline: none;
+    appearance: none;
+    outline: none;
 }
 
 input:checked {
-  counter-increment: score;
+    counter-increment: score;
 }
 
 .score::after {
-  content: counter(score);
+    content: counter(score);
 }
 
 h1 {
-  display: grid;
-  font-size: 32px;
-  font-family: cursive;
-  font-weight: bold;
-  place-items: center;
-  color: #00cf00;
-  padding-top: 22px;
-  margin: 0;
+    display: grid;
+    font-size: 32px;
+    font-family: cursive;
+    font-weight: bold;
+    place-items: center;
+    color: #00cf00;
+    padding-top: 22px;
+    margin: 0;
 }
 
 h5 {
-  display: grid;
-  font-size: 16px;
-  font-family: cursive;
-  font-weight: bold;
-  place-items: center;
-  color: #00cf00;
-  margin: 0;
+    display: grid;
+    font-size: 16px;
+    font-family: cursive;
+    font-weight: bold;
+    place-items: center;
+    color: #00cf00;
+    margin: 0;
 }
+
 
 /* animation */
 
 @keyframes bunny {
-  0% {
-    top: 0;
-  }
-
-  25% {
-    top: 80px;
-  }
-
-  100% {
-    top: 0;
-  }
+    0% {
+        top: 0;
+    }
+    25% {
+        top: 80px;
+    }
+    100% {
+        top: 0;
+    }
 }
 
 @keyframes layer {
-  0% {
-    bottom: 0;
-  }
-  25% {
-    bottom: -80px;
-  }
-  100% {
-    bottom: 0;
-  }
+    0% {
+        bottom: 0;
+    }
+    25% {
+        bottom: -80px;
+    }
+    100% {
+        bottom: 0;
+    }
 }
+
 
 /* layer and bunny */
 
 .layer-1 {
-  position: absolute;
-  /* z-index: 1; */
-  height: 450px;
-  width: 80px;
-  bottom: 0;
-  right: 60px;
-
-  animation-name: layer;
-  animation-duration: 1s;
-  animation-timing-function: ease-in-out;
-  animation-iteration-count: infinite;
+    position: absolute;
+    /* z-index: 1; */
+    height: 450px;
+    width: 80px;
+    bottom: 0;
+    right: 60px;
+    animation-name: layer;
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
 }
 
 .layer-1 input[type="checkbox"] {
-  animation-name: bunny;
-  animation-duration: 1s;
-  animation-timing-function: ease-in-out;
-  animation-iteration-count: infinite;
+    animation-name: bunny;
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
 }
 
 .layer-2 {
-  position: absolute;
-  z-index: 2;
-  height: 450px;
-  width: 80px;
-  bottom: 0;
-  left: 60px;
-
-  animation-name: layer;
-  animation-duration: 1.5s;
-  animation-timing-function: ease-in-out;
-  animation-iteration-count: infinite;
+    position: absolute;
+    z-index: 2;
+    height: 450px;
+    width: 80px;
+    bottom: 0;
+    left: 60px;
+    animation-name: layer;
+    animation-duration: 1.5s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
 }
 
 .layer-2 input[type="checkbox"] {
-  animation-name: bunny;
-  animation-duration: 1.5s;
-  animation-timing-function: ease-in-out;
-  animation-iteration-count: infinite;
+    animation-name: bunny;
+    animation-duration: 1.5s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
 }
 
 .layer-3 {
-  position: absolute;
-  z-index: 3;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  margin: 0 auto;
-  width: 220px;
-  height: 400px;
-  background: burlywood;
-  border-radius: 30px;
-  box-shadow: 0 19px 38px rgb(0, 0, 0, 0.3), 0 15px 12px rgb(0, 0, 0, 0.22);
+    position: absolute;
+    z-index: 3;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: 0 auto;
+    width: 220px;
+    height: 400px;
+    background: burlywood;
+    border-radius: 30px;
+    box-shadow: 0 19px 38px rgb(0, 0, 0, 0.3), 0 15px 12px rgb(0, 0, 0, 0.22);
 }
 
 .layer-4 {
-  position: absolute;
-  z-index: 4;
-  height: 350px;
-  width: 80px;
-  bottom: 0;
-  left: 30px;
-
-  animation-name: layer;
-  animation-duration: 0.5s;
-  animation-timing-function: ease-in-out;
-  animation-iteration-count: infinite;
+    position: absolute;
+    z-index: 4;
+    height: 350px;
+    width: 80px;
+    bottom: 0;
+    left: 30px;
+    animation-name: layer;
+    animation-duration: 0.5s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
 }
 
 .layer-4 input[type="checkbox"] {
-  animation-name: bunny;
-  animation-duration: 0.5s;
-  animation-timing-function: ease-in-out;
-  animation-iteration-count: infinite;
+    animation-name: bunny;
+    animation-duration: 0.5s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
 }
 
 .layer-5 {
-  position: absolute;
-  z-index: 5;
-  left: 0;
-  bottom: 0;
-  margin: 0 auto;
-  width: 160px;
-  height: 300px;
-  background: burlywood;
-  border-radius: 30px;
-  box-shadow: 0 19px 38px rgb(0, 0, 0, 0.3), 0 15px 12px rgb(0, 0, 0, 0.22);
+    position: absolute;
+    z-index: 5;
+    left: 0;
+    bottom: 0;
+    margin: 0 auto;
+    width: 160px;
+    height: 300px;
+    background: burlywood;
+    border-radius: 30px;
+    box-shadow: 0 19px 38px rgb(0, 0, 0, 0.3), 0 15px 12px rgb(0, 0, 0, 0.22);
 }
 
 .layer-6 {
-  position: absolute;
-  z-index: 6;
-  height: 300px;
-  width: 80px;
-  bottom: 0;
-  right: 30px;
-
-  animation-name: layer;
-  animation-duration: 2s;
-  animation-timing-function: ease-in-out;
-  animation-iteration-count: infinite;
+    position: absolute;
+    z-index: 6;
+    height: 300px;
+    width: 80px;
+    bottom: 0;
+    right: 30px;
+    animation-name: layer;
+    animation-duration: 2s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
 }
 
 .layer-6 input[type="checkbox"] {
-  animation-name: bunny;
-  animation-duration: 2s;
-  animation-timing-function: ease-in-out;
-  animation-iteration-count: infinite;
+    animation-name: bunny;
+    animation-duration: 2s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
 }
 
 .layer-7 {
-  position: absolute;
-  z-index: 7;
-  right: 0;
-  bottom: 0;
-  margin: 0 auto;
-  width: 180px;
-  height: 250px;
-  background: burlywood;
-  border-radius: 30px;
-  box-shadow: 0 19px 38px rgb(0, 0, 0, 0.3), 0 15px 12px rgb(0, 0, 0, 0.22);
+    position: absolute;
+    z-index: 7;
+    right: 0;
+    bottom: 0;
+    margin: 0 auto;
+    width: 180px;
+    height: 250px;
+    background: burlywood;
+    border-radius: 30px;
+    box-shadow: 0 19px 38px rgb(0, 0, 0, 0.3), 0 15px 12px rgb(0, 0, 0, 0.22);
 }
 
 .layer-8 {
-  position: absolute;
-  z-index: 8;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  margin: 0 auto;
-  width: 200px;
-  height: 50px;
+    position: absolute;
+    z-index: 8;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: 0 auto;
+    width: 200px;
+    height: 50px;
 }
 
 .layer-9 {
-  position: absolute;
-  z-index: 9;
-  left: 0;
-  bottom: 0;
-  margin: 0 auto;
-  width: 110px;
-  height: 100px;
-  border-radius: 0 0 0 32px;
+    position: absolute;
+    z-index: 9;
+    left: 0;
+    bottom: 0;
+    margin: 0 auto;
+    width: 110px;
+    height: 100px;
+    border-radius: 0 0 0 32px;
 }
 
 .layer-10 {
-  position: absolute;
-  z-index: 10;
-  right: 0;
-  bottom: 0;
-  margin: 0 auto;
-  width: 110px;
-  height: 100px;
-  border-radius: 0 0 32px 0;
+    position: absolute;
+    z-index: 10;
+    right: 0;
+    bottom: 0;
+    margin: 0 auto;
+    width: 110px;
+    height: 100px;
+    border-radius: 0 0 32px 0;
 }
 
+
 /* Bunny 1 */
+
 
 /* oreja der */
 
 .left-ear--outer {
-  background: white;
-  border-radius: 90px;
-  width: 20px;
-  height: 50px;
-  position: absolute;
-  left: 10px;
-  top: 0;
+    background: white;
+    border-radius: 90px;
+    width: 20px;
+    height: 50px;
+    position: absolute;
+    left: 10px;
+    top: 0;
 }
 
 .left-ear--inner {
-  background: pink;
-  border-radius: 100px;
-  width: 10px;
-  height: 50px;
-  position: absolute;
-  left: 15px;
-  top: 8px;
+    background: pink;
+    border-radius: 100px;
+    width: 10px;
+    height: 50px;
+    position: absolute;
+    left: 15px;
+    top: 8px;
 }
+
 
 /* oreja izq */
 
 .right-ear--outer {
-  background: white;
-  border-radius: 90px;
-  width: 20px;
-  height: 50px;
-  position: absolute;
-  right: 10px;
-  top: 0;
+    background: white;
+    border-radius: 90px;
+    width: 20px;
+    height: 50px;
+    position: absolute;
+    right: 10px;
+    top: 0;
 }
 
 .right-ear--inner {
-  background: pink;
-  border-radius: 100px;
-  width: 10px;
-  height: 50px;
-  position: absolute;
-  right: 15px;
-  top: 8px;
+    background: pink;
+    border-radius: 100px;
+    width: 10px;
+    height: 50px;
+    position: absolute;
+    right: 15px;
+    top: 8px;
 }
+
 
 /* cabeza */
 
 .head {
-  background: white;
-  width: 100%;
-  height: 80px;
-  border-radius: 50%;
-  position: absolute;
-  right: 0;
-  left: 0;
-  top: 30px;
-  margin: 0 auto;
+    background: white;
+    width: 100%;
+    height: 80px;
+    border-radius: 50%;
+    position: absolute;
+    right: 0;
+    left: 0;
+    top: 30px;
+    margin: 0 auto;
 }
+
 
 /* eyes */
 
 .head__eye {
-  border-radius: 50%;
-  background: #525251;
-  width: 4px;
-  height: 4px;
-  position: absolute;
-  top: 15px;
-
-  animation-name: blink;
-  animation-duration: 2s;
-  animation-iteration-count: infinite;
+    border-radius: 50%;
+    background: #525251;
+    width: 4px;
+    height: 4px;
+    position: absolute;
+    top: 15px;
+    animation-name: blink;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
 }
 
 @keyframes blink {
-  0% {
-    height: 4px;
-  }
-  5% {
-    transform: translate(0px, 2px);
-    height: 1px;
-  }
-  10% {
-    transform: translate(0px, 0px);
-    height: 4px;
-  }
+    0% {
+        height: 4px;
+    }
+    5% {
+        transform: translate(0px, 2px);
+        height: 1px;
+    }
+    10% {
+        transform: translate(0px, 0px);
+        height: 4px;
+    }
 }
 
 .head__eye--left {
-  left: 30px;
+    left: 30px;
 }
 
 .head__eye--right {
-  right: 30px;
+    right: 30px;
 }
+
 
 /* Wall */
 
 .lawn--3 {
-  position: absolute;
-  width: 220px;
-  height: 50px;
+    position: absolute;
+    width: 220px;
+    height: 50px;
 }
 
 .zigzag {
-  background: linear-gradient(135deg, #00cf00 25%, transparent 25%) -51px 0,
-    linear-gradient(-135deg, #00cf00 25%, transparent 25%) -50px 0,
-    linear-gradient(45deg, #00cf00 25%, transparent 25%),
-    linear-gradient(-45deg, #00cf00 25%, transparent 25%);
-  background-size: 20px 100px;
-  border-radius: 30px 30px 0 0;
+    background: linear-gradient(135deg, #00cf00 25%, transparent 25%) -51px 0, linear-gradient(-135deg, #00cf00 25%, transparent 25%) -50px 0, linear-gradient(45deg, #00cf00 25%, transparent 25%), linear-gradient(-45deg, #00cf00 25%, transparent 25%);
+    background-size: 20px 100px;
+    border-radius: 30px 30px 0 0;
 }
 
 .shadow--3 {
-  position: absolute;
-  width: 220px;
-  height: 50px;
-  top: 10px;
+    position: absolute;
+    width: 220px;
+    height: 50px;
+    top: 10px;
 }
 
 .zigzag--shadow {
-  background: linear-gradient(
-        135deg,
-        rgb(164 143 118 / 80%) 25%,
-        transparent 25%
-      ) -50px 0,
-    linear-gradient(-135deg, rgb(128 70 0 / 50%) 25%, transparent 25%) -50px 0,
-    linear-gradient(45deg, rgb(128 70 0 / 50%) 25%, transparent 25%),
-    linear-gradient(-45deg, rgb(128 70 0 / 50%) 25%, transparent 25%);
-  background-size: 20px 100px;
-  border-radius: 20px 20px 0 0;
+    background: linear-gradient( 135deg, rgb(164 143 118 / 80%) 25%, transparent 25%) -50px 0, linear-gradient(-135deg, rgb(128 70 0 / 50%) 25%, transparent 25%) -50px 0, linear-gradient(45deg, rgb(128 70 0 / 50%) 25%, transparent 25%), linear-gradient(-45deg, rgb(128 70 0 / 50%) 25%, transparent 25%);
+    background-size: 20px 100px;
+    border-radius: 20px 20px 0 0;
 }
 
 .lawn--5 {
-  position: absolute;
-  width: 160px;
-  height: 50px;
+    position: absolute;
+    width: 160px;
+    height: 50px;
 }
 
 .shadow--5 {
-  position: absolute;
-  width: 160px;
-  height: 50px;
-  top: 10px;
+    position: absolute;
+    width: 160px;
+    height: 50px;
+    top: 10px;
 }
 
 .lawn--7 {
-  position: absolute;
-  width: 180px;
-  height: 50px;
+    position: absolute;
+    width: 180px;
+    height: 50px;
 }
 
 .shadow--7 {
-  position: absolute;
-  width: 180px;
-  height: 50px;
-  top: 10px;
+    position: absolute;
+    width: 180px;
+    height: 50px;
+    top: 10px;
 }
 
 .lawn--1 {
-  position: absolute;
-  background: green;
-  width: 200px;
-  height: 50px;
-  border-radius: 80% 80% 0 0;
+    position: absolute;
+    background: green;
+    width: 200px;
+    height: 50px;
+    border-radius: 80% 80% 0 0;
 }
 
 .lawn--center {
-  position: absolute;
-  background: green;
-  width: 90px;
-  height: 90px;
-  border-radius: 100%;
-  bottom: 40px;
-  left: 60px;
+    position: absolute;
+    background: green;
+    width: 90px;
+    height: 90px;
+    border-radius: 100%;
+    bottom: 40px;
+    left: 60px;
 }
 
 .lawn--left {
-  position: absolute;
-  background: green;
-  width: 100px;
-  height: 100px;
-  border-radius: 100%;
-  bottom: 10px;
-  bottom: 10px;
-  box-shadow: 0 19px 38px rgb(0, 0, 0, 0.3), 0 15px 12px rgb(0, 0, 0, 0.22);
+    position: absolute;
+    background: green;
+    width: 100px;
+    height: 100px;
+    border-radius: 100%;
+    bottom: 10px;
+    bottom: 10px;
+    box-shadow: 0 19px 38px rgb(0, 0, 0, 0.3), 0 15px 12px rgb(0, 0, 0, 0.22);
 }
 
 .lawn--right {
-  position: absolute;
-  background: green;
-  width: 100px;
-  height: 100px;
-  border-radius: 100%;
-  right: 0;
-  bottom: 10px;
-  box-shadow: 0 19px 38px rgb(0, 0, 0, 0.3), 0 15px 12px rgb(0, 0, 0, 0.22);
+    position: absolute;
+    background: green;
+    width: 100px;
+    height: 100px;
+    border-radius: 100%;
+    right: 0;
+    bottom: 10px;
+    box-shadow: 0 19px 38px rgb(0, 0, 0, 0.3), 0 15px 12px rgb(0, 0, 0, 0.22);
 }
 
 .nube-izq-down {
-  position: absolute;
-  background: white;
-  width: 120px;
-  height: 70px;
-  bottom: 0;
-  border-radius: 100% 100% 60px 60px;
+    position: absolute;
+    background: white;
+    width: 120px;
+    height: 70px;
+    bottom: 0;
+    border-radius: 100% 100% 60px 60px;
 }
 
 .nube-izq-top {
-  position: absolute;
-  background: white;
-  width: 90px;
-  height: 90px;
-  border-radius: 100% 100% 100% 50%;
-  bottom: 24px;
+    position: absolute;
+    background: white;
+    width: 90px;
+    height: 90px;
+    border-radius: 100% 100% 100% 50%;
+    bottom: 24px;
 }
 
 .nube-der-down {
-  position: absolute;
-  background: white;
-  width: 120px;
-  height: 70px;
-  bottom: 0;
-  border-radius: 100px 40% 80% 60px;
-  right: 0;
+    position: absolute;
+    background: white;
+    width: 120px;
+    height: 70px;
+    bottom: 0;
+    border-radius: 100px 40% 80% 60px;
+    right: 0;
 }
 
 .nube-der-top {
-  position: absolute;
-  background: white;
-  width: 90px;
-  height: 90px;
-  border-radius: 100% 100% 100% 50%;
-  bottom: 24px;
-  right: 0;
+    position: absolute;
+    background: white;
+    width: 90px;
+    height: 90px;
+    border-radius: 100% 100% 100% 50%;
+    bottom: 24px;
+    right: 0;
+}
+
+
+/* === Modal === */
+
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0s, opacity 0.3s;
+    z-index: 999;
+}
+
+.modal.show {
+    visibility: visible;
+    opacity: 1;
+}
+
+.modal-content {
+    background: white;
+    padding: 20px;
+    border-radius: 15px;
+    text-align: center;
+    font-family: cursive;
+    max-width: 280px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    animation: pop 0.3s ease;
+}
+
+@keyframes pop {
+    0% {
+        transform: scale(0.7);
+        opacity: 0;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+.modal-content button {
+    margin-top: 12px;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 6px;
+    background: #00cf00;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
 }
